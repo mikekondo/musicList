@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>23990327756-7atli119hvmg9v25urc05bu5qtcmbokq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.23990327756-7atli119hvmg9v25urc05bu5qtcmbokq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCdNshLQ_S5Kow_QNrkywa1Ix55HZnihpU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>23990327756</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mkondo.musicListApp</string>
+	<key>PROJECT_ID</key>
+	<string>musiclistapp-65cab</string>
+	<key>STORAGE_BUCKET</key>
+	<string>musiclistapp-65cab.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:23990327756:ios:d5fb521175c76b3145e569</string>
+</dict>
+</plist>
