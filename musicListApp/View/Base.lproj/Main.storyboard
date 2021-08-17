@@ -133,7 +133,7 @@
                                             <constraint firstAttribute="height" constant="50" id="ejp-a9-Yow"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="お気に入りを確認">
+                                        <state key="normal" title="MyMusicList">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -146,7 +146,7 @@
                                             <constraint firstAttribute="height" constant="50" id="FLl-8T-md7"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="みんなのリストを見る">
+                                        <state key="normal" title="Everyone'sList">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
