@@ -16,5 +16,7 @@ target 'musicListApp' do
   pod 'SwiftyJSON', '~> 4.0'
   pod 'DTGradientButton'
   pod 'ChameleonFramework/Swift'
-
+  pod "SwiftyCam"
+  pod 'SwiftVideoGenerator'
+  pod 'NVActivityIndicatorView'
 end

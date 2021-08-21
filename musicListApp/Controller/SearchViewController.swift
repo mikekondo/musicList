@@ -27,7 +27,7 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     var userName = String()
     var autoID = String()
     var player = AVPlayer()
-    let path = Bundle.main.path(forResource: "Laser", ofType: "mp4")
+    let path = Bundle.main.path(forResource: "autoWave", ofType: "mp4")
     override func viewDidLoad() {
         super.viewDidLoad()
         //背景を動画にする

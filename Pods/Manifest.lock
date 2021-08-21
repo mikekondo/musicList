@@ -100,11 +100,16 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - NVActivityIndicatorView (5.1.1):
+    - NVActivityIndicatorView/Base (= 5.1.1)
+  - NVActivityIndicatorView/Base (5.1.1)
   - PKHUD (5.3.0)
   - PromisesObjC (2.0.0)
   - SDWebImage (5.11.1):
     - SDWebImage/Core (= 5.11.1)
   - SDWebImage/Core (5.11.1)
+  - SwiftVideoGenerator (1.4.0)
+  - SwiftyCam (4.0.0)
   - SwiftyJSON (4.3.0)
   - VerticalCardSwiper (2.3.1)
 
@@ -115,8 +120,11 @@ DEPENDENCIES:
   - Firebase
   - Firebase/Auth
   - Firebase/Database
+  - NVActivityIndicatorView
   - PKHUD (~> 5.0)
   - SDWebImage (~> 5.0)
+  - SwiftVideoGenerator
+  - SwiftyCam
   - SwiftyJSON (~> 4.0)
   - VerticalCardSwiper
 
@@ -138,9 +146,12 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - NVActivityIndicatorView
     - PKHUD
     - PromisesObjC
     - SDWebImage
+    - SwiftVideoGenerator
+    - SwiftyCam
     - SwiftyJSON
     - VerticalCardSwiper
 
@@ -161,12 +172,15 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  NVActivityIndicatorView: 1f6c5687f1171810aa27a3296814dc2d7dec3667
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
+  SwiftVideoGenerator: 804637c18f68a4f205d806e305ebceb4adcf3d25
+  SwiftyCam: 6e57914771d972fbe508e759dc9d0150a44a93fd
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   VerticalCardSwiper: 68df635b354500f86934ea044ade37a264c044c6
 
-PODFILE CHECKSUM: 6d53a60ef6199c6d819f39bc11be4e2358ae1ffc
+PODFILE CHECKSUM: 1d2d66865bf921037cc5a73e3af123a557445fa1
 
 COCOAPODS: 1.10.2

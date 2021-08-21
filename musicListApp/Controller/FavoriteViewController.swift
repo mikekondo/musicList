@@ -10,6 +10,7 @@ import Firebase
 import SDWebImage
 import AVFoundation
 import PKHUD
+import SwiftVideoGenerator
 class PlayMusicButton:UIButton{
     var params:Dictionary<String,Any>
     override init(frame:CGRect){
@@ -97,7 +98,7 @@ class FavoriteViewController: UIViewController,UITableViewDelegate,UITableViewDa
         return 1
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 159
+        return 160
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -110,11 +111,19 @@ class FavoriteViewController: UIViewController,UITableViewDelegate,UITableViewDa
         label2.text = musicDataModel.musicName
         imageView.sd_setImage(with: URL(string:musicDataModel.imageString), completed: nil)
         //再生ボタン
-        let playButton = PlayMusicButton(frame:CGRect(x: view.frame.size.width-60, y: 50, width: 60, height: 60))
-        playButton.setImage(UIImage(named: "play"), for: .normal)
+        let playButton = PlayMusicButton(frame:CGRect(x: view.frame.size.width-375, y: 40, width: 80, height: 80))
+        playButton.setImage(UIImage(named: "play2"), for: .normal)
         playButton.addTarget(self, action: #selector(playButtonTap(_ :)), for: .touchUpInside)
         playButton.params["value"]=indexPath.row
-        cell.accessoryView=playButton
+        //cell.accessoryView=playButton
+        cell.contentView.addSubview(playButton)
+        //カメラボタン
+        let cameraButton = UIButton(frame: CGRect(x: view.frame.size.width-85, y: 50, width: 60, height: 60))
+        cameraButton.setImage(UIImage(named:"camera_6"), for: .normal)
+        //ボタンを押したとき
+        cameraButton.addTarget(self, action: #selector(cameraButtonTap(_:)), for:.touchUpInside)
+        cameraButton.tag = indexPath.row
+        cell.contentView.addSubview(cameraButton)
         return cell
     }
     @objc func playButtonTap(_ sender:PlayMusicButton){
