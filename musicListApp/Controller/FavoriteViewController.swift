@@ -29,6 +29,8 @@ class FavoriteViewController: UIViewController,UITableViewDelegate,UITableViewDa
     @IBOutlet weak var favTableView: UITableView!
     //お気に入り曲リストの配列
     var musicDataModelArray = [MusicDataModel]()
+    //CameraViewControllerに渡す音源URL
+    var musicURL:URL?
     //firebase内のデータ
     var postSnapArray = [PostSnap]()
     var artworkUrl = ""
@@ -111,20 +113,35 @@ class FavoriteViewController: UIViewController,UITableViewDelegate,UITableViewDa
         label2.text = musicDataModel.musicName
         imageView.sd_setImage(with: URL(string:musicDataModel.imageString), completed: nil)
         //再生ボタン
-        let playButton = PlayMusicButton(frame:CGRect(x: view.frame.size.width-375, y: 40, width: 80, height: 80))
+        let playButton = PlayMusicButton(frame:CGRect(x: view.frame.size.width-335, y: 40, width: 80, height: 80))
         playButton.setImage(UIImage(named: "play2"), for: .normal)
         playButton.addTarget(self, action: #selector(playButtonTap(_ :)), for: .touchUpInside)
         playButton.params["value"]=indexPath.row
         //cell.accessoryView=playButton
         cell.contentView.addSubview(playButton)
         //カメラボタン
-        let cameraButton = UIButton(frame: CGRect(x: view.frame.size.width-85, y: 50, width: 60, height: 60))
-        cameraButton.setImage(UIImage(named:"camera_6"), for: .normal)
+        let cameraButton = UIButton(frame: CGRect(x: view.frame.size.width-70, y: 50, width: 60, height: 60))
+        cameraButton.setImage(UIImage(named:"camera"), for: .normal)
         //ボタンを押したとき
         cameraButton.addTarget(self, action: #selector(cameraButtonTap(_:)), for:.touchUpInside)
         cameraButton.tag = indexPath.row
         cell.contentView.addSubview(cameraButton)
         return cell
+    }
+    @objc func cameraButtonTap(_ sender:UIButton){
+        //音声が流れている時止める
+        if player?.isPlaying == true{
+            player?.stop()
+        }
+        //値を渡しながら画面遷移
+        let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let CameraVC = storyboard.instantiateViewController(withIdentifier: "CameraVC") as! CameraViewController
+        //sender.tagを用いて、musicURLを取得
+        musicURL = URL(string: self.musicDataModelArray[sender.tag].preViewURL)!
+        //CameraViewControllerにmusicURLを渡す
+        CameraVC.cameraMusicURL = musicURL
+        //CameraViewControllerに画面遷移
+        self.navigationController?.pushViewController(CameraVC, animated: true)
     }
     @objc func playButtonTap(_ sender:PlayMusicButton){
         //音楽を一旦止める

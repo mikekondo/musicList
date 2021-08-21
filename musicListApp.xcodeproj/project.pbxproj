@@ -27,6 +27,11 @@
 		9591120C26BE14C000851E86 /* PostSnap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9591120B26BE14C000851E86 /* PostSnap.swift */; };
 		95B2133926B6797900CB37C2 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2133826B6797900CB37C2 /* FavoriteViewController.swift */; };
 		95C84ECA26D09F0A004027EA /* autoWave.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 95C84EC926D09F0A004027EA /* autoWave.mp4 */; };
+		95C84ECC26D0A2EB004027EA /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C84ECB26D0A2EB004027EA /* CameraViewController.swift */; };
+		95C84ECE26D0A8AC004027EA /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C84ECD26D0A8AC004027EA /* LoadingView.swift */; };
+		95C84ED026D0A8B0004027EA /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C84ECF26D0A8B0004027EA /* SwiftyRecordButton.swift */; };
+		95C84ED226D0AAF5004027EA /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C84ED126D0AAF5004027EA /* EditViewController.swift */; };
+		95C84ED426D0B686004027EA /* FusionVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C84ED326D0B686004027EA /* FusionVideoViewController.swift */; };
 		95E606DB26B6A7FE0038F0D2 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E606DA26B6A7FE0038F0D2 /* ListTableViewController.swift */; };
 		95E606DD26B6AAE50038F0D2 /* GetUserIDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E606DC26B6AAE50038F0D2 /* GetUserIDModel.swift */; };
 		95E606DF26B6B3570038F0D2 /* OtherPersonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E606DE26B6B3570038F0D2 /* OtherPersonListViewController.swift */; };
@@ -55,6 +60,11 @@
 		9591120B26BE14C000851E86 /* PostSnap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostSnap.swift; sourceTree = "<group>"; };
 		95B2133826B6797900CB37C2 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		95C84EC926D09F0A004027EA /* autoWave.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = autoWave.mp4; sourceTree = "<group>"; };
+		95C84ECB26D0A2EB004027EA /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		95C84ECD26D0A8AC004027EA /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		95C84ECF26D0A8B0004027EA /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
+		95C84ED126D0AAF5004027EA /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		95C84ED326D0B686004027EA /* FusionVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FusionVideoViewController.swift; sourceTree = "<group>"; };
 		95E606DA26B6A7FE0038F0D2 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		95E606DC26B6AAE50038F0D2 /* GetUserIDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserIDModel.swift; sourceTree = "<group>"; };
 		95E606DE26B6B3570038F0D2 /* OtherPersonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherPersonListViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +138,9 @@
 				95B2133826B6797900CB37C2 /* FavoriteViewController.swift */,
 				95E606DA26B6A7FE0038F0D2 /* ListTableViewController.swift */,
 				95E606DE26B6B3570038F0D2 /* OtherPersonListViewController.swift */,
+				95C84ECB26D0A2EB004027EA /* CameraViewController.swift */,
+				95C84ED126D0AAF5004027EA /* EditViewController.swift */,
+				95C84ED326D0B686004027EA /* FusionVideoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -140,6 +153,8 @@
 				95709F0C26B4B81F00A26DB5 /* Main.storyboard */,
 				95709F0F26B4B82000A26DB5 /* Assets.xcassets */,
 				95709F1126B4B82000A26DB5 /* LaunchScreen.storyboard */,
+				95C84ECD26D0A8AC004027EA /* LoadingView.swift */,
+				95C84ECF26D0A8B0004027EA /* SwiftyRecordButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,12 +310,17 @@
 				9501754526B6311D0037502F /* MusicDataModel.swift in Sources */,
 				9501754226B624370037502F /* CardViewCell.swift in Sources */,
 				95B2133926B6797900CB37C2 /* FavoriteViewController.swift in Sources */,
+				95C84ECE26D0A8AC004027EA /* LoadingView.swift in Sources */,
 				95709F0726B4B81F00A26DB5 /* AppDelegate.swift in Sources */,
 				95903BE126B4F73B005605C1 /* SelectViewController.swift in Sources */,
+				95C84ED226D0AAF5004027EA /* EditViewController.swift in Sources */,
 				9591120C26BE14C000851E86 /* PostSnap.swift in Sources */,
 				95709F0926B4B81F00A26DB5 /* SceneDelegate.swift in Sources */,
+				95C84ED426D0B686004027EA /* FusionVideoViewController.swift in Sources */,
+				95C84ED026D0A8B0004027EA /* SwiftyRecordButton.swift in Sources */,
 				95E606DD26B6AAE50038F0D2 /* GetUserIDModel.swift in Sources */,
 				95E606DB26B6A7FE0038F0D2 /* ListTableViewController.swift in Sources */,
+				95C84ECC26D0A2EB004027EA /* CameraViewController.swift in Sources */,
 				95903BDB26B4D6E1005605C1 /* UIColorExtension.swift in Sources */,
 				95E606DF26B6B3570038F0D2 /* OtherPersonListViewController.swift in Sources */,
 				95903BDD26B4DB17005605C1 /* SaveProfile.swift in Sources */,

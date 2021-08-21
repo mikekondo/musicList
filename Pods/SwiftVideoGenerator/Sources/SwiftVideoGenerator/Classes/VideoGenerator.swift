@@ -489,7 +489,7 @@ public class VideoGenerator: NSObject {
     let aAudioAsset: AVAsset = AVAsset(url: audioUrl)
     
     if let videoTrack = mixComposition.addMutableTrack(withMediaType: .video, preferredTrackID: kCMPersistentTrackID_Invalid), let audioTrack = mixComposition.addMutableTrack(withMediaType: .audio, preferredTrackID: kCMPersistentTrackID_Invalid) {
-      videoTrack.preferredTransform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
+        videoTrack.preferredTransform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
       mutableCompositionVideoTrack.append(videoTrack)
       mutableCompositionAudioTrack.append(audioTrack)
     }

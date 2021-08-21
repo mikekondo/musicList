@@ -62,21 +62,19 @@ class SelectViewController: UIViewController,VerticalCardSwiperDelegate,Vertical
     }
     
     func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
-            artistNameArray.remove(at: index)
-            musicNameArray.remove(at: index)
-            previewURLArray.remove(at: index)
-            imageStringArray.remove(at: index)
-        }
-    //右にスワイプした時にした時に好きなものとして、新しい配列に入れてあげる
-    //スワイプした時に発動されるデリゲートメソッド
-    func didSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
         //indexには何番目のカードかが入っている
+        print("indexNumber")
+        print(indexNumber)
         indexNumber = index
+        print("//")
         //右にスワイプした時に呼ばれる箇所
         if swipeDirection == .Right{
+            print("スワイプ")
             //好きなものとして新しい配列に入れる
             likeArtistNameArray.append(artistNameArray[indexNumber])
+            print(likeArtistNameArray.last!)
             likeMusicNameArray.append(musicNameArray[indexNumber])
+            print(likeMusicNameArray.last!)
             likePreviewURLArray.append(previewURLArray[indexNumber])
             likeImageStringArray.append(imageStringArray[indexNumber])
             if (likeArtistNameArray.count != 0 && likeMusicNameArray.count != 0 && likePreviewURLArray.count != 0 && likeImageStringArray.count != 0)
@@ -86,7 +84,41 @@ class SelectViewController: UIViewController,VerticalCardSwiperDelegate,Vertical
                 musicDataModel.save()
             }
         }
-    }
+        artistNameArray.remove(at: index)
+        musicNameArray.remove(at: index)
+        previewURLArray.remove(at: index)
+        imageStringArray.remove(at: index)
+        }
+    //右にスワイプした時にした時に好きなものとして、新しい配列に入れてあげる
+    //スワイプした時に発動されるデリゲートメソッド
+//    func didSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
+//        //indexには何番目のカードかが入っている
+//        print("indexNumber")
+//        print(indexNumber)
+//        indexNumber = index
+//        print("//")
+//        //右にスワイプした時に呼ばれる箇所
+//        if swipeDirection == .Right{
+//            print("スワイプ")
+//            //好きなものとして新しい配列に入れる
+//            likeArtistNameArray.append(artistNameArray[indexNumber])
+//            print(likeArtistNameArray.last!)
+//            likeMusicNameArray.append(musicNameArray[indexNumber])
+//            print(likeMusicNameArray.last!)
+//            likePreviewURLArray.append(previewURLArray[indexNumber])
+//            likeImageStringArray.append(imageStringArray[indexNumber])
+//            if (likeArtistNameArray.count != 0 && likeMusicNameArray.count != 0 && likePreviewURLArray.count != 0 && likeImageStringArray.count != 0)
+//            {
+//                let musicDataModel = MusicDataModel(artistName:artistNameArray[indexNumber], musicName: musicNameArray[indexNumber], preViewURL: previewURLArray[indexNumber], imageString: imageStringArray[indexNumber], userID: userID, userName: userName,key:"0")
+//                //firebaseに好きな曲のコンテンツを保存する
+//                musicDataModel.save()
+//            }
+//        }
+//        artistNameArray.remove(at: index)
+//        musicNameArray.remove(at: index)
+//        previewURLArray.remove(at: index)
+//        imageStringArray.remove(at: index)
+//    }
     
     @IBAction func back(_ sender: Any) {
         dismiss(animated: true, completion: nil)

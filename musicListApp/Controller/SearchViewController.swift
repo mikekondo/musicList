@@ -68,8 +68,6 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         }
         //UITextFieldDelegateの委任
         searchTextField.delegate = self
-        //キーボードを表示させる
-        searchTextField.becomeFirstResponder()
         //ボタンにグラデーションを追加する
         favButton.setGradientBackgroundColors([UIColor(hex:"ffffff"),UIColor(hex:"800080")], direction: .toBottom, for: .normal)
         listButton.setGradientBackgroundColors([UIColor(hex:"FF8960"),UIColor(hex:"FF62A5")], direction: .toBottom, for: .normal)
