@@ -8,6 +8,7 @@
 import UIKit
 import AVKit
 import Photos
+import PKHUD
 class FusionVideoViewController: UIViewController {
     //EditViewControllerから受け取った音源と動画の融合URLが入る
     var FusionURL:URL?
@@ -84,7 +85,7 @@ class FusionVideoViewController: UIViewController {
             }
             if result{
                 print("動画を保存しました")
-                self.saveLabel.titleLabel?.text = "complete"
+                //self.saveLabel.titleLabel?.text = "complete"
             }
         }
     }
