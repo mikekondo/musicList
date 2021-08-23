@@ -3,6 +3,7 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - ChameleonFramework/Swift (2.1.0):
     - ChameleonFramework/Default
+  - DSFloatingButton (1.0.1)
   - DTGradientButton (0.1.3)
   - Firebase (8.4.0):
     - Firebase/Core (= 8.4.0)
@@ -116,6 +117,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.0.0-rc.3)
   - ChameleonFramework/Swift
+  - DSFloatingButton
   - DTGradientButton
   - Firebase
   - Firebase/Auth
@@ -132,6 +134,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - ChameleonFramework
+    - DSFloatingButton
     - DTGradientButton
     - Firebase
     - FirebaseAnalytics
@@ -158,6 +161,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  DSFloatingButton: 2611b44e75736cd2f2686691ee4d2c16f2b62391
   DTGradientButton: 6f0f696cd433255d226c05e4ab047d991d13d4ef
   Firebase: 54cdc8bc9c9b3de54f43dab86e62f5a76b47034f
   FirebaseAnalytics: 4751d6a49598a2b58da678cc07df696bcd809ab9
@@ -181,6 +185,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   VerticalCardSwiper: 68df635b354500f86934ea044ade37a264c044c6
 
-PODFILE CHECKSUM: 1d2d66865bf921037cc5a73e3af123a557445fa1
+PODFILE CHECKSUM: cee8ac32912f272aaed2c3da839e786c1b71784f
 
 COCOAPODS: 1.10.2

@@ -1,6 +1,7 @@
 ${PODS_ROOT}/Target Support Files/Pods-musicListApp/Pods-musicListApp-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
 ${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework
+${BUILT_PRODUCTS_DIR}/DSFloatingButton/DSFloatingButton.framework
 ${BUILT_PRODUCTS_DIR}/DTGradientButton/DTGradientButton.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseAuth/FirebaseAuth.framework
 ${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework

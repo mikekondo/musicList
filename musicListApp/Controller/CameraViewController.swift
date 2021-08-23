@@ -36,7 +36,10 @@ class CameraViewController: SwiftyCamViewController,SwiftyCamViewControllerDeleg
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
     }
-
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func openAlbum(_ sender: Any) {
         //動画のみが閲覧できるアルバムを起動
         let imagePickerController = UIImagePickerController()

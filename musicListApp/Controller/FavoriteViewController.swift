@@ -120,7 +120,7 @@ class FavoriteViewController: UIViewController,UITableViewDelegate,UITableViewDa
         //cell.accessoryView=playButton
         cell.contentView.addSubview(playButton)
         //カメラボタン
-        let cameraButton = UIButton(frame: CGRect(x: view.frame.size.width-70, y: 50, width: 60, height: 60))
+        let cameraButton = UIButton(frame: CGRect(x: view.frame.size.width-75, y: 50, width: 60, height: 60))
         cameraButton.setImage(UIImage(named:"camera"), for: .normal)
         //ボタンを押したとき
         cameraButton.addTarget(self, action: #selector(cameraButtonTap(_:)), for:.touchUpInside)

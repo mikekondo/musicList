@@ -10,6 +10,8 @@ import AVKit
 import SDWebImage
 import AVFoundation
 import SwiftVideoGenerator
+import DTGradientButton
+import ChameleonFramework
 class EditViewController: UIViewController {
     //CameraViewControllerから受け取ったcameraVideoURLが入る
     var editVideoURL:URL?
@@ -19,6 +21,7 @@ class EditViewController: UIViewController {
     var videoPath:URL?
     var playerController:AVPlayerViewController?
     var player:AVPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("videoURL",editVideoURL!)
@@ -69,7 +72,10 @@ class EditViewController: UIViewController {
     @objc func cancel(){
         //画面を戻る
         self.navigationController?.popViewController(animated: true)
-        
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
     //playerの繰り返し処理
     @objc func playerItemDidReachEnd(_ notification:Notification){
@@ -101,4 +107,5 @@ class EditViewController: UIViewController {
             }
         }
     }
+    
 }

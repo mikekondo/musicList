@@ -19,4 +19,5 @@ target 'musicListApp' do
   pod "SwiftyCam"
   pod 'SwiftVideoGenerator'
   pod 'NVActivityIndicatorView'
+  pod 'DSFloatingButton'
 end

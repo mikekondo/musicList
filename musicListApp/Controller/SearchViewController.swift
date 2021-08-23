@@ -69,21 +69,23 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         //UITextFieldDelegateの委任
         searchTextField.delegate = self
         //ボタンにグラデーションを追加する
-        favButton.setGradientBackgroundColors([UIColor(hex:"ffffff"),UIColor(hex:"800080")], direction: .toBottom, for: .normal)
-        listButton.setGradientBackgroundColors([UIColor(hex:"FF8960"),UIColor(hex:"FF62A5")], direction: .toBottom, for: .normal)
+        favButton.setGradientBackgroundColors([UIColor(hex:"#FFFFFF"),UIColor(hex:"#0000FF")], direction: .toBottom, for: .normal)
+        listButton.setGradientBackgroundColors([UIColor(hex:"#FFFFFF"),UIColor(hex:"#FF0000")], direction: .toBottom, for: .normal)
         // Do any additional setup after loading the view.
     }
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        //ナビゲーションバーを隠さない(バックボタンを表示するため)
+//        self.navigationController?.isNavigationBarHidden = true
+//    }
     override func viewWillAppear(_ animated: Bool) {
-        
+
         super.viewWillAppear(animated)
-        
+
         //バーの色(ChameleonFramework)
         self.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.flatGray()
         //ナビゲーションバーのBackButtonを消す
         self.navigationItem.setHidesBackButton(true, animated: true)
-        
-        
-        
     }
     //returnを押すとキーボードが閉じる処理(UITextFieldDelegateによるデリゲートメソッド)
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

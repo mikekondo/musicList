@@ -70,7 +70,10 @@ class FusionVideoViewController: UIViewController {
             self.player?.play()
         }
     }
-
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func savePhotoLibrary(_ sender: Any) {
         //動画を保存する
         PHPhotoLibrary.shared().performChanges {
