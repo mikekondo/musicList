@@ -11,6 +11,7 @@ class CardViewCell: CardCell {
     @IBOutlet weak var artWorkImageView:UIImageView!
     @IBOutlet weak var musicNameLabel:UILabel!
     @IBOutlet weak var artistNameLabel:UILabel!
+    @IBOutlet weak var playButton: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

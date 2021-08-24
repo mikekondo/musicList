@@ -430,16 +430,14 @@
         <scene sceneID="T0a-zh-QkC">
             <objects>
                 <viewController id="0Pe-3m-kjs" customClass="SelectViewController" customModule="musicListApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="lxg-bZ-ZNw">
+                    <view key="view" contentMode="scaleToFill" id="lxg-bZ-ZNw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wAL-I2-o8t" customClass="VerticalCardSwiper" customModule="VerticalCardSwiper">
-                                <rect key="frame" x="0.0" y="89" width="375" height="578"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wAL-I2-o8t" customClass="VerticalCardSwiper" customModule="VerticalCardSwiper">
+                                <rect key="frame" x="0.0" y="89" width="375" height="509"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="wAL-I2-o8t" secondAttribute="height" multiplier="138:269" id="0H8-Wk-Wa6"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="topInset">
                                         <real key="value" value="3"/>
@@ -460,16 +458,31 @@
                                     <action selector="back:" destination="0Pe-3m-kjs" eventType="touchUpInside" id="Bio-eO-QSo"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qc-De-yFF" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="132" y="606" width="111" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" systemColor="systemBlueColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playButton:" destination="0Pe-3m-kjs" eventType="touchUpInside" id="FOH-0F-ecx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d3t-5M-bGW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="3kh-DH-qcU" firstAttribute="top" secondItem="lxg-bZ-ZNw" secondAttribute="top" constant="30" id="EZa-8h-cBY"/>
                             <constraint firstItem="3kh-DH-qcU" firstAttribute="leading" secondItem="d3t-5M-bGW" secondAttribute="leading" constant="17" id="QEN-EG-wJf"/>
-                            <constraint firstAttribute="bottom" secondItem="wAL-I2-o8t" secondAttribute="bottom" id="Wfh-HZ-cPh"/>
-                            <constraint firstItem="wAL-I2-o8t" firstAttribute="leading" secondItem="d3t-5M-bGW" secondAttribute="leading" id="XEG-3h-sj2"/>
-                            <constraint firstItem="wAL-I2-o8t" firstAttribute="trailing" secondItem="d3t-5M-bGW" secondAttribute="trailing" id="fix-wl-iIR"/>
-                            <constraint firstItem="wAL-I2-o8t" firstAttribute="top" secondItem="3kh-DH-qcU" secondAttribute="bottom" constant="10" id="m0t-yw-930"/>
                         </constraints>
                     </view>
                     <connections>
@@ -478,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jsy-f0-ekC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1694" y="823"/>
+            <point key="canvasLocation" x="1693.5999999999999" y="821.73913043478262"/>
         </scene>
         <!--List Table View Controller-->
         <scene sceneID="M1M-An-9Rc">

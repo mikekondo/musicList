@@ -19,8 +19,8 @@ class FusionVideoViewController: UIViewController {
         super.viewDidLoad()
     }
     override func viewWillAppear(_ animated: Bool) {
-        //ナビゲーションバーを消す
-        self.navigationController?.isNavigationBarHidden = false
+        //ナビゲーションバーを隠す
+        self.navigationController?.isNavigationBarHidden = true
     }
     override func viewDidAppear(_ animated: Bool) {
         //完成された動画URLの再生(passedURL)

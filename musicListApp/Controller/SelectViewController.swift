@@ -11,13 +11,14 @@ import SDWebImage
 import PKHUD
 import Firebase
 import ChameleonFramework
+import AVFoundation
 class SelectViewController: UIViewController,VerticalCardSwiperDelegate,VerticalCardSwiperDatasource {
     //SearchViewControllerからの受け取り用配列
     var artistNameArray = [String]()
     var musicNameArray = [String]()
     var previewURLArray = [String]()
     var imageStringArray = [String]()
-    var indexNumber = Int()
+    var indexNumber = 0
     var userID = String()
     var userName = String()
     //右にスワイプした時に好きなものを入れる配列
@@ -26,6 +27,7 @@ class SelectViewController: UIViewController,VerticalCardSwiperDelegate,Vertical
     var likePreviewURLArray = [String]()
     var likeImageStringArray = [String]()
     var likeArtistViewUrlArray = [String]()
+    var player:AVAudioPlayer?
     @IBOutlet weak var cardSwiper: VerticalCardSwiper!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,12 +46,14 @@ class SelectViewController: UIViewController,VerticalCardSwiperDelegate,Vertical
     func cardForItemAt(verticalCardSwiperView: VerticalCardSwiperView, cardForItemAt index: Int) -> CardCell {
         
         if let cardCell = verticalCardSwiperView.dequeueReusableCell(withReuseIdentifier: "CardViewCell", for: index) as? CardViewCell {
+            indexNumber=index
             //カードの背景色もランダムで表示
             verticalCardSwiperView.backgroundColor = UIColor.randomFlat()
             view.backgroundColor = verticalCardSwiperView.backgroundColor
             //セル(カード)に配列を表示させる
             let artistName = artistNameArray[index]
             let musicName =  musicNameArray[index]
+            print("index")
             cardCell.setRandomBackgroundColor()
             cardCell.artistNameLabel.text = artistName
             cardCell.artistNameLabel.textColor = UIColor.white
@@ -61,20 +65,43 @@ class SelectViewController: UIViewController,VerticalCardSwiperDelegate,Vertical
         return CardCell()
     }
     
+    @IBAction func playButton(_ sender: Any) {
+        //indexNumber-1はわざと
+        let url = URL(string: previewURLArray[indexNumber-1])
+        downLoadMusicURL(url: url!)
+    }
+    func didTapCard(verticalCardSwiperView: VerticalCardSwiperView, index: Int) {
+        let url = URL(string: previewURLArray[index])
+        downLoadMusicURL(url: url!)
+    }
+    //ダウンロードメソッド
+    func downLoadMusicURL(url:URL){
+      var downloadTask:URLSessionDownloadTask
+      downloadTask = URLSession.shared.downloadTask(with: url, completionHandler: { (url, response, error) in
+        self.play(url: url!)
+      })
+      downloadTask.resume()
+    }
+    //音楽再生メソッド
+    func play(url:URL){
+      do {
+        player = try AVAudioPlayer(contentsOf: url)
+        player?.prepareToPlay()
+        player?.volume = 1.0
+        player?.play()
+      } catch let error as NSError {
+        print(error.description)
+      }
+    }
     func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
         //indexには何番目のカードかが入っている
-        print("indexNumber")
-        print(indexNumber)
         indexNumber = index
-        print("//")
         //右にスワイプした時に呼ばれる箇所
         if swipeDirection == .Right{
             print("スワイプ")
             //好きなものとして新しい配列に入れる
             likeArtistNameArray.append(artistNameArray[indexNumber])
-            print(likeArtistNameArray.last!)
             likeMusicNameArray.append(musicNameArray[indexNumber])
-            print(likeMusicNameArray.last!)
             likePreviewURLArray.append(previewURLArray[indexNumber])
             likeImageStringArray.append(imageStringArray[indexNumber])
             if (likeArtistNameArray.count != 0 && likeMusicNameArray.count != 0 && likePreviewURLArray.count != 0 && likeImageStringArray.count != 0)
