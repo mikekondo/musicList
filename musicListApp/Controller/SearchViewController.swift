@@ -81,7 +81,6 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
 
         super.viewWillAppear(animated)
-
         //バーの色(ChameleonFramework)
         self.navigationController?.navigationBar.standardAppearance.backgroundColor = UIColor.flatGray()
         //ナビゲーションバーのBackButtonを消す

@@ -96,6 +96,10 @@ class SelectViewController: UIViewController,VerticalCardSwiperDelegate,Vertical
     func willSwipeCardAway(card: CardCell, index: Int, swipeDirection: SwipeDirection) {
         //indexには何番目のカードかが入っている
         indexNumber = index
+        //音楽が再生されていたら停止する
+        if player?.isPlaying == true{
+            player?.stop()
+        }
         //右にスワイプした時に呼ばれる箇所
         if swipeDirection == .Right{
             print("スワイプ")
