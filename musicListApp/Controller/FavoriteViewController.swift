@@ -112,13 +112,13 @@ class FavoriteViewController: UIViewController,UITableViewDelegate,UITableViewDa
         label1.text = musicDataModel.artistName
         label2.text = musicDataModel.musicName
         imageView.sd_setImage(with: URL(string:musicDataModel.imageString), completed: nil)
-        //再生ボタン
-        let playButton = PlayMusicButton(frame:CGRect(x: view.frame.size.width-335, y: 40, width: 80, height: 80))
-        playButton.setImage(UIImage(named: "play2"), for: .normal)
-        playButton.addTarget(self, action: #selector(playButtonTap(_ :)), for: .touchUpInside)
-        playButton.params["value"]=indexPath.row
-        //cell.accessoryView=playButton
-        cell.contentView.addSubview(playButton)
+//        //再生ボタン
+//        let playButton = PlayMusicButton(frame:CGRect(x: view.frame.size.width-335, y: 40, width: 80, height: 80))
+//        playButton.setImage(UIImage(named: "play2"), for: .normal)
+//        playButton.addTarget(self, action: #selector(playButtonTap(_ :)), for: .touchUpInside)
+//        playButton.params["value"]=indexPath.row
+//        //cell.accessoryView=playButton
+//        cell.contentView.addSubview(playButton)
         //カメラボタン
         let cameraButton = UIButton(frame: CGRect(x: view.frame.size.width-75, y: 50, width: 60, height: 60))
         cameraButton.setImage(UIImage(named:"camera"), for: .normal)
@@ -127,6 +127,12 @@ class FavoriteViewController: UIViewController,UITableViewDelegate,UITableViewDa
         cameraButton.tag = indexPath.row
         cell.contentView.addSubview(cameraButton)
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let urlString = musicDataModelArray[indexPath.row].preViewURL
+        let url = URL(string: urlString!)
+        downloadMusicURL(url: url!)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     @objc func cameraButtonTap(_ sender:UIButton){
         //音声が流れている時止める

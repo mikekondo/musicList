@@ -16,8 +16,6 @@ import ChameleonFramework
 import AVFoundation
 class SearchViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var searchTextField: UITextField!
-    @IBOutlet weak var favButton: UIButton!
-    @IBOutlet weak var listButton: UIButton!
     //モデルで作れるが一旦ここに作る
     var artistNameArray = [String]()
     var musicNameArray = [String]()
@@ -68,10 +66,6 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
         }
         //UITextFieldDelegateの委任
         searchTextField.delegate = self
-        //ボタンにグラデーションを追加する
-        favButton.setGradientBackgroundColors([UIColor(hex:"#FFFFFF"),UIColor(hex:"#0000FF")], direction: .toBottom, for: .normal)
-        listButton.setGradientBackgroundColors([UIColor(hex:"#FFFFFF"),UIColor(hex:"#FF0000")], direction: .toBottom, for: .normal)
-        // Do any additional setup after loading the view.
     }
 //    override func viewWillAppear(_ animated: Bool) {
 //        super.viewWillAppear(animated)
@@ -172,13 +166,15 @@ class SearchViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func moveToFav(_ sender: Any) {
         //画面遷移(StoryBoardIDがfavのVC)
-        let favVC = self.storyboard?.instantiateViewController(identifier: "fav") as! FavoriteViewController
-        self.navigationController?.pushViewController(favVC, animated: true)
+                let favVC = self.storyboard?.instantiateViewController(identifier: "fav") as! FavoriteViewController
+                self.navigationController?.pushViewController(favVC, animated: true)
     }
+    
     @IBAction func moveToList(_ sender: Any) {
         //画面遷移(StoryBoardIDがlistのVC)
-        let listVC = self.storyboard?.instantiateViewController(identifier: "list") as! ListTableViewController
-        self.navigationController?.pushViewController(listVC, animated: true)
+                let listVC = self.storyboard?.instantiateViewController(identifier: "list") as! ListTableViewController
+                self.navigationController?.pushViewController(listVC, animated: true)
     }
+    
     
 }

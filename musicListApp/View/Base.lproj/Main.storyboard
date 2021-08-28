@@ -16,55 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="musician" translatesAutoresizingMaskIntoConstraints="NO" id="nHu-Ap-z9Y">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="nHu-Ap-z9Y" secondAttribute="height" multiplier="207:448" id="8Li-2J-EZx"/>
-                                </constraints>
-                            </imageView>
-                            <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oq5-aV-GxC">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="USERNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIR-nV-7N3">
+                                <rect key="frame" x="16" y="230" width="343" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiV-yl-zbn">
-                                <rect key="frame" x="3" y="204" width="369" height="70"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DiV-yl-zbn" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="16" y="342" width="343" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="g1Z-gY-FCL"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="新規登録">
+                                <state key="normal" title="SIGN UP">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o34-3b-hCQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ユーザ名を入力してください" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TIR-nV-7N3">
-                                <rect key="frame" x="63" y="387" width="248" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="287" id="13Q-RZ-UTZ"/>
-                                    <constraint firstAttribute="height" constant="34" id="kbD-1f-iSf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="TIR-nV-7N3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="1wq-mj-zw6"/>
-                            <constraint firstItem="nHu-Ap-z9Y" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="I1z-SJ-Zzg"/>
-                            <constraint firstItem="TIR-nV-7N3" firstAttribute="top" secondItem="DiV-yl-zbn" secondAttribute="bottom" constant="113" id="IHM-o5-mwH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TIR-nV-7N3" secondAttribute="trailing" constant="64" id="cEa-KP-dZ6"/>
-                            <constraint firstItem="nHu-Ap-z9Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eEA-aW-SJY"/>
-                            <constraint firstItem="nHu-Ap-z9Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mFQ-ES-Mep"/>
-                            <constraint firstItem="DiV-yl-zbn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="3" id="owu-Xc-gYn"/>
-                            <constraint firstAttribute="bottom" secondItem="nHu-Ap-z9Y" secondAttribute="bottom" id="sAQ-fa-8Pe"/>
-                            <constraint firstItem="DiV-yl-zbn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="204" id="tJb-O3-clD"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DiV-yl-zbn" secondAttribute="trailing" constant="3" id="w5Y-yV-tEP"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="DiV-yl-zbn" id="L6R-AX-Dg4"/>
@@ -73,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="30" y="92"/>
+            <point key="canvasLocation" x="29.600000000000001" y="91.304347826086968"/>
         </scene>
         <!-- -->
         <scene sceneID="cl4-nP-T41">
@@ -83,95 +55,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9q-Td-PR2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N9q-Td-PR2">
+                                <rect key="frame" x="-5" y="0.0" width="380" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WPe-Je-vgM">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="380" height="667"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="N9q-Td-PR2" secondAttribute="height" multiplier="207:448" id="IKW-bG-fbn"/>
-                                </constraints>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="mkc-Ol-mnn">
-                                <rect key="frame" x="20" y="116" width="335" height="30"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ArtistName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tBi-bb-7ka">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="v78-YL-VtS"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Inv-f5-g4i">
-                                        <rect key="frame" x="305" y="0.0" width="30" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="30" id="sQj-y9-Vr5"/>
-                                            <constraint firstAttribute="height" constant="30" id="vve-Jf-eR2"/>
-                                        </constraints>
-                                        <state key="normal" image="search"/>
-                                        <connections>
-                                            <action selector="moveToSelectCardView:" destination="JaL-dP-Vgy" eventType="touchUpInside" id="NG3-ii-Vgu"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="N9b-Hl-sAa">
-                                <rect key="frame" x="0.0" y="455" width="375" height="140"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIJ-Br-IQh">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="ejp-a9-Yow"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="MyMusicList">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="moveToFav:" destination="JaL-dP-Vgy" eventType="touchUpInside" id="t2h-vB-Xt6"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uxb-jy-miK">
-                                        <rect key="frame" x="0.0" y="90" width="375" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="FLl-8T-md7"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="Everyone'sList">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="moveToList:" destination="JaL-dP-Vgy" eventType="touchUpInside" id="QjW-xZ-gCI"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXu-az-QeY" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="37" y="550" width="300" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Everyone'sList">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" systemColor="systemGray2Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="animateInteraction" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moveToList:" destination="JaL-dP-Vgy" eventType="touchUpInside" id="Ufo-d0-Ttx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18c-sd-qvw" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="37" y="450" width="300" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="MyMusicList">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" systemColor="systemGray2Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" systemColor="systemBlueColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="moveToFav:" destination="JaL-dP-Vgy" eventType="touchUpInside" id="lFf-Y3-Yb2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ArtistName,MusicName" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tBi-bb-7ka">
+                                <rect key="frame" x="37" y="100" width="300" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Inv-f5-g4i">
+                                <rect key="frame" x="340" y="102" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="search"/>
+                                <connections>
+                                    <action selector="moveToSelectCardView:" destination="JaL-dP-Vgy" eventType="touchUpInside" id="NG3-ii-Vgu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7b8-ot-OHh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="N9q-Td-PR2" firstAttribute="top" secondItem="snN-9v-vAg" secondAttribute="top" id="37w-XE-HQS"/>
-                            <constraint firstItem="7b8-ot-OHh" firstAttribute="bottom" secondItem="N9b-Hl-sAa" secondAttribute="bottom" constant="72" id="BHu-uI-egg"/>
-                            <constraint firstItem="mkc-Ol-mnn" firstAttribute="centerX" secondItem="snN-9v-vAg" secondAttribute="centerX" id="Hbc-S3-xht"/>
-                            <constraint firstItem="N9b-Hl-sAa" firstAttribute="centerX" secondItem="snN-9v-vAg" secondAttribute="centerX" id="MjQ-C3-iSN"/>
-                            <constraint firstItem="mkc-Ol-mnn" firstAttribute="top" secondItem="7b8-ot-OHh" secondAttribute="top" constant="72" id="QlX-JK-2Zn"/>
-                            <constraint firstItem="N9q-Td-PR2" firstAttribute="leading" secondItem="7b8-ot-OHh" secondAttribute="leading" id="bE3-rL-LKT"/>
-                            <constraint firstAttribute="bottom" secondItem="N9q-Td-PR2" secondAttribute="bottom" id="dUm-uz-nmK"/>
-                            <constraint firstItem="7b8-ot-OHh" firstAttribute="trailing" secondItem="N9b-Hl-sAa" secondAttribute="trailing" id="gmm-bx-Ywh"/>
-                            <constraint firstItem="N9b-Hl-sAa" firstAttribute="leading" secondItem="7b8-ot-OHh" secondAttribute="leading" id="hOx-gN-pHY"/>
-                            <constraint firstItem="N9q-Td-PR2" firstAttribute="trailing" secondItem="7b8-ot-OHh" secondAttribute="trailing" id="mIa-Je-YEr"/>
-                            <constraint firstItem="N9b-Hl-sAa" firstAttribute="centerX" secondItem="snN-9v-vAg" secondAttribute="centerX" id="zTW-Ty-FBs"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title=" " id="Hbt-zA-km0">
                         <barButtonItem key="backBarButtonItem" title="戻る" id="Iq0-Rx-vzr"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="favButton" destination="xIJ-Br-IQh" id="27b-7o-8lr"/>
-                        <outlet property="listButton" destination="Uxb-jy-miK" id="NOV-08-diX"/>
                         <outlet property="searchTextField" destination="tBi-bb-7ka" id="HpI-zO-M5I"/>
                         <segue destination="0Pe-3m-kjs" kind="presentation" identifier="selectVC" modalPresentationStyle="fullScreen" id="csx-Dd-Vbx"/>
                         <segue destination="t9P-4Q-gpv" kind="show" identifier="" id="BOK-xS-zDp"/>
@@ -180,7 +135,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2m-OL-Yqn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1692.753623188406" y="91.741071428571431"/>
+            <point key="canvasLocation" x="1692" y="91.304347826086968"/>
         </scene>
         <!--Favorite View Controller-->
         <scene sceneID="onT-5G-xaY">
@@ -434,26 +389,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qc-De-yFF" customClass="DSFloatingButton" customModule="DSFloatingButton">
-                                <rect key="frame" x="157" y="602" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="play" image="play2">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
-                                        <color key="value" systemColor="systemRedColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
-                                        <color key="value" systemColor="systemBlueColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="playButton:" destination="0Pe-3m-kjs" eventType="touchUpInside" id="FOH-0F-ecx"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wAL-I2-o8t" customClass="VerticalCardSwiper" customModule="VerticalCardSwiper">
-                                <rect key="frame" x="0.0" y="89" width="375" height="509"/>
+                                <rect key="frame" x="0.0" y="89" width="375" height="490"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
@@ -474,6 +411,33 @@
                                 <state key="normal" image="back"/>
                                 <connections>
                                     <action selector="back:" destination="0Pe-3m-kjs" eventType="touchUpInside" id="Bio-eO-QSo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Qc-De-yFF" customClass="DSFloatingButton" customModule="DSFloatingButton">
+                                <rect key="frame" x="147" y="583" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="play" image="play2">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientStartColor">
+                                        <color key="value" systemColor="systemRedColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="gradientEndColor">
+                                        <color key="value" systemColor="systemBlueColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="playButton:" destination="0Pe-3m-kjs" eventType="touchUpInside" id="FOH-0F-ecx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -681,14 +645,23 @@
         </scene>
     </scenes>
     <designables>
+        <designable name="18c-sd-qvw">
+            <size key="intrinsicContentSize" width="149" height="42"/>
+        </designable>
         <designable name="8Qc-De-yFF">
             <size key="intrinsicContentSize" width="289" height="256"/>
+        </designable>
+        <designable name="DiV-yl-zbn">
+            <size key="intrinsicContentSize" width="80" height="36"/>
         </designable>
         <designable name="HI0-Mg-6lN">
             <size key="intrinsicContentSize" width="66" height="48"/>
         </designable>
         <designable name="IPW-gB-tLd">
             <size key="intrinsicContentSize" width="94" height="48"/>
+        </designable>
+        <designable name="NXu-az-QeY">
+            <size key="intrinsicContentSize" width="172" height="42"/>
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
@@ -701,7 +674,6 @@
         <image name="flip" width="256" height="256"/>
         <image name="listBackGround" width="1280" height="1920"/>
         <image name="listImage" width="1280" height="1920"/>
-        <image name="musician" width="1280" height="1920"/>
         <image name="play2" width="256" height="256"/>
         <image name="search" width="128" height="128"/>
         <systemColor name="opaqueSeparatorColor">
@@ -712,6 +684,9 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

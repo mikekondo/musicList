@@ -18,6 +18,9 @@
 		95709F0E26B4B81F00A26DB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95709F0C26B4B81F00A26DB5 /* Main.storyboard */; };
 		95709F1026B4B82000A26DB5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95709F0F26B4B82000A26DB5 /* Assets.xcassets */; };
 		95709F1326B4B82000A26DB5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95709F1126B4B82000A26DB5 /* LaunchScreen.storyboard */; };
+		95898E2626D9B9200039C656 /* Spectrum.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 95898E2526D9B9200039C656 /* Spectrum.mp4 */; };
+		95898E2826D9BBF60039C656 /* Band.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 95898E2726D9BBF60039C656 /* Band.mp4 */; };
+		95898E2E26D9BDC20039C656 /* Record.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 95898E2D26D9BDC20039C656 /* Record.mp4 */; };
 		95903BD326B4CC0C005605C1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95903BD226B4CC0C005605C1 /* GoogleService-Info.plist */; };
 		95903BD926B4D478005605C1 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95903BD826B4D478005605C1 /* LoginViewController.swift */; };
 		95903BDB26B4D6E1005605C1 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95903BDA26B4D6E1005605C1 /* UIColorExtension.swift */; };
@@ -51,6 +54,9 @@
 		95709F0F26B4B82000A26DB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95709F1226B4B82000A26DB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95709F1426B4B82000A26DB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95898E2526D9B9200039C656 /* Spectrum.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Spectrum.mp4; sourceTree = "<group>"; };
+		95898E2726D9BBF60039C656 /* Band.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Band.mp4; sourceTree = "<group>"; };
+		95898E2D26D9BDC20039C656 /* Record.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Record.mp4; sourceTree = "<group>"; };
 		95903BD226B4CC0C005605C1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		95903BD826B4D478005605C1 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		95903BDA26B4D6E1005605C1 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
@@ -123,6 +129,9 @@
 				950E641A26BE8EBB00F4647E /* ink.mp4 */,
 				950E641826BE89CC00F4647E /* Laser.mp4 */,
 				95C84EC926D09F0A004027EA /* autoWave.mp4 */,
+				95898E2526D9B9200039C656 /* Spectrum.mp4 */,
+				95898E2726D9BBF60039C656 /* Band.mp4 */,
+				95898E2D26D9BDC20039C656 /* Record.mp4 */,
 			);
 			path = musicListApp;
 			sourceTree = "<group>";
@@ -249,9 +258,12 @@
 				95903BD326B4CC0C005605C1 /* GoogleService-Info.plist in Resources */,
 				95709F1026B4B82000A26DB5 /* Assets.xcassets in Resources */,
 				950E641926BE89CC00F4647E /* Laser.mp4 in Resources */,
+				95898E2826D9BBF60039C656 /* Band.mp4 in Resources */,
 				95709F0E26B4B81F00A26DB5 /* Main.storyboard in Resources */,
 				9501754326B624370037502F /* CardViewCell.xib in Resources */,
 				950E641B26BE8EBB00F4647E /* ink.mp4 in Resources */,
+				95898E2E26D9BDC20039C656 /* Record.mp4 in Resources */,
+				95898E2626D9B9200039C656 /* Spectrum.mp4 in Resources */,
 				95C84ECA26D09F0A004027EA /* autoWave.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
